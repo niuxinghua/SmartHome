@@ -1,0 +1,17 @@
+//
+//  SmartHome.pch
+//  SmartHome
+//
+//  Created by 尹啟星 on 16/9/18.
+//  Copyright © 2016年 尹啟星. All rights reserved.
+//
+
+#ifndef SmartHome_pch
+#define SmartHome_pch
+#import "uSDKAppConfig.h"
+#import "appBase.h"
+#import "AppDelegate.h"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* SmartHome_pch */

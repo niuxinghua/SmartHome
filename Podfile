@@ -1,13 +1,14 @@
 # Uncomment this line to define a global platform for your project
- platform :ios, ‘8.0’
+# platform :ios, '9.0'
 
 target 'SmartHome' do
   # Uncomment this line if you're using Swift or would like to use dynamic frameworks
-   use_frameworks!
+  # use_frameworks!
 
   # Pods for SmartHome
-  pod 'AFNetworking'
-
+pod 'AFNetworking', '~> 3.0'
+pod 'RealReachability', '~> 1.1.2’
+pod 'YYCategories'
   target 'SmartHomeTests' do
     inherit! :search_paths
     # Pods for testing

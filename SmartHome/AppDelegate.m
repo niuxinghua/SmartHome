@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "BaseNavViewController.h"
+#import "WiFiInfoInPutViewController.h"
+#import <SystemConfiguration/CaptiveNetwork.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +20,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [DeviceService startUSDK:^(BOOL success) {
+        
+    }];
+    WiFiInfoInPutViewController *wifiInPutController = [WiFiInfoInPutViewController new];
+    BaseNavViewController *nav = [[BaseNavViewController alloc] initWithRootViewController:wifiInPutController];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self.window makeKeyAndVisible];
+    self.window.rootViewController = nav;
     return YES;
 }
 
@@ -122,6 +133,28 @@
             abort();
         }
     }
+}
+
+- (NSString *)currentSSID {
+    NSArray *interfaces = (__bridge_transfer
+                           NSArray*)CNCopySupportedInterfaces();
+    NSDictionary *info = nil;
+    for (NSString *ifname in interfaces) {
+        info = (__bridge_transfer NSDictionary*)CNCopyCurrentNetworkInfo
+        ((__bridge CFStringRef)ifname);
+        if (info && [info count]) {
+            break;
+        }
+        info = nil;
+    }
+    
+    NSString *ssid = nil;
+    
+    if ( info ){
+        ssid = [info objectForKey:@"SSID"];
+    }
+    info = nil;
+    return ssid? ssid:@"";
 }
 
 @end
