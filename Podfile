@@ -9,6 +9,7 @@ target 'SmartHome' do
 pod 'AFNetworking', '~> 3.0'
 pod 'RealReachability', '~> 1.1.2’
 pod 'YYCategories'
+pod 'IQKeyboardManager'
   target 'SmartHomeTests' do
     inherit! :search_paths
     # Pods for testing

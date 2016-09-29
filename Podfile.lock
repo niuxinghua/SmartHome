@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - IQKeyboardManager (4.0.6)
   - RealReachability (1.1.8):
     - RealReachability/Connection (= 1.1.8)
     - RealReachability/Ping (= 1.1.8)
@@ -25,14 +26,16 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - IQKeyboardManager
   - RealReachability (~> 1.1.2)
   - YYCategories
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  IQKeyboardManager: c52debb1967799ae7addb98eab0cf328083a874f
   RealReachability: e6c8a2bbffa316006e8c282efc1ee2567d61a920
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: 4b543bf6e4ba968668faed068a514936cfdb09cd
+PODFILE CHECKSUM: b9aee481e6ed6072f2cd2639b217ae106e7b4532
 
 COCOAPODS: 1.0.1

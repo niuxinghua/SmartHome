@@ -20,7 +20,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.wifiNname.text = [theApp currentSSID];
-    // Do any additional setup after loading the view from its nib.
 }
 - (IBAction)bind:(UIButton *)sender {
     Log(@"绑定设备-wifi%@--密码：%@",self.wifiNname.text,self.pwdInputTextField.text);

@@ -14,7 +14,6 @@ typedef void (^uSdkBingdingSuccessBlock)(uSDKDevice* dev);
 typedef void (^uSdkBingdingFaildBlock)(NSError* error);
 
 @interface HEDeviceService : NSObject
-
 @property(nonatomic,assign) BOOL isuSDKStartSuccess;
 + (instancetype)sharedInstance;
 - (void)startUSDK:(boolBlock)block;

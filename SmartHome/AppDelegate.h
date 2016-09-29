@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "HEDeviceService.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-
+@property(nonatomic,assign) BOOL isUSDKStartSuccess;
 @property (strong, nonatomic) UIWindow *window;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
