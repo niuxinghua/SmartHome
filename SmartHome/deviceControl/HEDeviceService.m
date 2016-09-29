@@ -43,6 +43,8 @@
         block(NO);
         DeviceService.isuSDKStartSuccess = NO;
         Log(@"uSDK启动失败");
+        
+        
     }];
 }
 - (void)smartLinkBindWithSSID:(NSString*)ssid
